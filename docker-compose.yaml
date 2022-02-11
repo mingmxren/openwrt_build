@@ -10,7 +10,6 @@ services:
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     environment:
-      - PUID=1000
-      - PGID=1000
+      - FORCE_UNSAFE_CONFIGURE=1
     volumes:
       - /data/openwrt_build:/build
