@@ -1,0 +1,14 @@
+version: "3"
+services:
+  openwrt_build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mingmxren/openwrt_build:latest
+    container_name: openwrt_build
+    hostname: openwrt_build
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /data/openwrt_build:/build
